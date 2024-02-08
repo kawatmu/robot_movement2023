@@ -3,7 +3,7 @@ MouseCamera mouseCamera;
 void setup() {
   size(1000,1000,P3D);
   lights();
-  mouseCamera = new MouseCamera(800.0, 0, 0, (height/2.0)/tan(PI*30.0/180.0), 0, 0, 0, 0, 1, 0); // MouseCameraの生成
+  mouseCamera = new MouseCamera(2000.0, 2000, -400, (height/2.0)/tan(PI*30.0/180.0), 0, 0, 0, 0, 1, 0); // MouseCameraの生成
   draw();
 }
 
