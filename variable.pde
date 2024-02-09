@@ -79,9 +79,9 @@ void screw(){
     rotateZ(radians(-90));
     rotateY(radians(θ4));
     box(30,10,30);
-    translate(0,75,0);
-    pillar(150,10,10);
-    translate(0,-75,0);
+    translate(0,60,0);
+    pillar(120,10,10);
+    translate(0,-60,0);
     rotateY(radians(-θ4));
     rotateZ(radians(90));
     translate(-y1-210,z1,-x1);
@@ -89,9 +89,9 @@ void screw(){
     translate(710,0,-400);
     rotateZ(radians(-90));
     box(30,10,30);
-    translate(0,75,0);
-    pillar(150,10,10);
-    translate(0,-75,0);
+    translate(0,60,0);
+    pillar(120,10,10);
+    translate(0,-60,0);
     rotateZ(radians(90));
     translate(-710,0,400);
   }
