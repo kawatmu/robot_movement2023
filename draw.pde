@@ -56,7 +56,7 @@ void draw() {
     
     translate(801,-801,401);
     rotateZ(radians(90));
-    pillar(40,10,10);
+    pillar(40,12,12);
     rotateZ(radians(-90));
     translate(80,400,0);
     box(200,900,100);
