@@ -40,12 +40,30 @@ void draw() {
     println("θ1","θ2","θ3","x1","y1","z1","power","θ5");
     println(int(θ1),int(θ2),int(θ3),int(x1),int(y1),int(z1),power,θ5,millis());
     mouseCamera.update(); // MouseCameraのアップデート
-    background(255);
+    if (pattern1 == 1){
+      background(200,200,200);
+    }else if (pattern1 == 0){
+      background(255);
+    }
+    //background(255);
+    
     screwpj();
     screw();
+    
     translate(0,50,0);
     box(200,100,200);
-    translate(0,-250,0);
+    translate(0,-50,0);
+    
+    translate(801,-801,401);
+    rotateZ(radians(90));
+    pillar(40,10,10);
+    rotateZ(radians(-90));
+    translate(30,400,0);
+    box(100,900,100);
+    translate(-30,-400,0);
+    translate(-801,801,-401);
+    
+    translate(0,-200,0);
     rotateY(radians(θ1));
     pillar(400,50,50);
     translate(0,-200,0);
