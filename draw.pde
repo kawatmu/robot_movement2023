@@ -37,8 +37,8 @@ float rad = 0;
 void draw() {
     variable();
     //rolling()
-    println("θ1","θ2","θ3","x1","y1","z1","power","θ5");
-    println(int(θ1),int(θ2),int(θ3),int(x1),int(y1),int(z1),power,θ5,millis());
+    println("(θ1:",int(θ1*45/0.785),") (θ2:",int(θ2*45/0.785),") (θ3:",int(θ3*45/0.785),") (x1:",int(x1),") (y1:",int(y1),") (z1:",int(z1),") (power:",power,") (θ5:",θ5,") (millis:",millis(),")");
+    //println(int(θ1*45/0.785),int(θ2*45/0.785),int(θ3*45/0.785),int(x1),int(y1),int(z1),power,θ5,millis());
     mouseCamera.update(); // MouseCameraのアップデート
     if (pattern1 == 1){
       background(200,200,200);
@@ -64,11 +64,13 @@ void draw() {
     translate(-801,801,-401);
     
     translate(0,-200,0);
-    rotateY(radians(θ1));
+    //rotateY(radians(θ1));
+    rotateY(θ1);
     pillar(400,50,50);
     translate(0,-200,0);
     rotateZ(radians(90));
-    rotateY(radians(θ2));
+    //rotateY(radians(θ2));
+    rotateY(θ2);
     //sphere(50);
     pillar(50,50,50);
     translate(-200,0,0);
@@ -76,13 +78,16 @@ void draw() {
     box(400,50,100);
     translate(-200,0,0);
     pillar(50,50,50);
-    rotateY(radians(θ3));  
+    //rotateY(radians(θ3));  
+    rotateY(θ3);  
     translate(-200,0,0);
     box(400,50,100);
     translate(-200,0,0);
     sphere(50);
-    rotateY(radians(90-θ2-θ3));
-    rotateZ(radians(90-θ1));
+    //rotateY(radians(90-θ2-θ3));
+    rotateY(PI/2-θ2-θ3);
+    //rotateZ(radians(90-θ1));
+    rotateZ(PI/2-θ1);
     translate(-75,0,0);
     rotateZ(radians(90));
     //rotateY(radians(θ3));
